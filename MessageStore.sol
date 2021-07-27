@@ -2,17 +2,15 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
-contract MessageStore {
+import "./Ownable.sol";
+
+contract MessageStore is Ownable {
     
-    address private onwer;
     string private message;
     
-    constructor()  {
-        onwer = msg.sender;
-    }
-    
     //modifica el mensaje por el mensaje ingresado 
-    function setMessage(string memory newMessage) public isOnwer {
+    function setMessage(string memory newMessage) public payable  {
+        require(msg.value == 3 ether);
         message = newMessage;
     }
     
@@ -20,11 +18,24 @@ contract MessageStore {
     function getMessage() public view returns (string memory) {
         return message;
     }
-    
-    //decora el metodo que no puede ser ejecutaado si no es el propietario el que hace la transaccion
-    modifier isOnwer() {
-        require(onwer == msg.sender);
-        _; //necesario en los modifier
+    // muestra balance del contrato en wei
+    function getBalance() public view returns (uint) {
+        return address(this).balance;
+    }
+    // muestra balance del contrato en ether
+    function getBalanceInEther() public view returns (uint) {
+        return getBalance() / 1e18;
+    }
+    //solo el propietario puede transferir del contrato a su cuenta
+    function transfer(uint amount) public isOwner {
+        require(address(this). balance >= amount);
+        payable(owner).transfer(amount);
+    }
+    //solo el propietario puede transferir a otra cuenta
+    function transferTo(uint amount, address payable to) public isOwner {
+        require(address(this). balance >= amount);
+        require(to != address(0));
+        to.transfer(amount);
     }
 
 }

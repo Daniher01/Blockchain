@@ -1,0 +1,137 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalanceInEther",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMessage",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "newMessage",
+						"type": "string"
+					}
+				],
+				"name": "setMessage",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "transferTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"MessageStore.sol": "MessageStore"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"MessageStore.sol": {
+			"keccak256": "0xe5d7fe749835ce9580f627e45b12c3a9ed8341947c55dfd0306dbd99e03bb1c8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://371952e2f194dca6b30858de72fff5f730944d9b01e8a368c599f94c5b623961",
+				"dweb:/ipfs/QmQF2z5qLbKAd2JYPS7x6iW94tRbYUd8MXbVupW1WjxvKs"
+			]
+		},
+		"Ownable.sol": {
+			"keccak256": "0xc945f17ec601b827372091c46d919fc5602d7df125a6cbf208161a0a3f702a41",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://ddc965a97d6b70483ff7240ba0628247aab26b77fadce1877e1ea0f5d4122f3e",
+				"dweb:/ipfs/QmPPbApaVzfBBgYUrF7jPwqNhkUkSuFDp7CWyzwgaxRFHd"
+			]
+		}
+	},
+	"version": 1
+}
